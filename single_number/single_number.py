@@ -5,6 +5,14 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
+    # return a list
+    # needs to iterate over
+    # needs to check if there is a duplicate in that list
+
+    # for each number, have you seen it more than once in the list?
+        # if so, keep going
+        # otherwise, return it
+
     pass
 
 
