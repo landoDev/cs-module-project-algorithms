@@ -10,8 +10,15 @@ def moving_zeroes(arr):
     # is there a zero
         # add it to a new array
     # add the two arrays together, zero's in front
-
-    pass
+    zero_arr = []
+    non_zeros = []
+    for i in arr:
+        if i == 0:
+            zero_arr.append(i)
+        else:
+            non_zeros.append(i)
+    moved_arr = zero_arr + non_zeros
+    return moved_arr
 
 
 if __name__ == '__main__':

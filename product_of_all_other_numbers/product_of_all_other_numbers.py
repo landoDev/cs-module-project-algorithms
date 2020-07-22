@@ -8,8 +8,17 @@ def product_of_all_other_numbers(arr):
     # multiply every element by each other element in a list
     # need to track where the root number is and ignore it while iterating through and multiplying it by all other numbers
     # return the multiplied numbers
-
-    pass
+    # this has to be close
+    multiplied_arr = [0] * len(arr)
+    for i in range(len(arr)- 1):
+        for i in range(len(arr)- 1):
+            root = arr[i]
+            new_num = root
+            filtered_arr = [num for num in arr if num != root]
+            for num in filtered_arr:
+                new_num = num * new_num
+            multiplied_arr[i] = new_num
+    return multiplied_arr
 
 
 if __name__ == '__main__':
