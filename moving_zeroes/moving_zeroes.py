@@ -17,7 +17,7 @@ def moving_zeroes(arr):
             zero_arr.append(i)
         else:
             non_zeros.append(i)
-    moved_arr = zero_arr + non_zeros
+    moved_arr = non_zeros + zero_arr
     return moved_arr
 
 
