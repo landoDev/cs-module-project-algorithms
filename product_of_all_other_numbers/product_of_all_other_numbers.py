@@ -5,6 +5,10 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
+    # multiply every element by each other element in a list
+    # need to track where the root number is and ignore it while iterating through and multiplying it by all other numbers
+    # return the multiplied numbers
+
     pass
 
 

@@ -5,6 +5,12 @@ Returns: a List of integers
 def moving_zeroes(arr):
     # Your code here
 
+    # the zeros need to be moved to the front of the passed array
+    # iterate over the arr
+    # is there a zero
+        # add it to a new array
+    # add the two arrays together, zero's in front
+
     pass
 
 

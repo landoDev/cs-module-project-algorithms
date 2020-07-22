@@ -8,12 +8,22 @@ def single_number(arr):
     # return a list
     # needs to iterate over
     # needs to check if there is a duplicate in that list
+    number = None
+    # iterate over the original array
+    for i in arr:
+        # check each number against the original array and see if it occurs again
+        index = i
+        occurences = 0
+        for num in arr:
+            if index == num:
+                occurences += 1
+        if occurences < 2:
+            number = index
+            return number
+            # if it does, increment the occurence
+        # if that number has more than one occurrence, keep going, otherwise return that number
+    return number
 
-    # for each number, have you seen it more than once in the list?
-        # if so, keep going
-        # otherwise, return it
-
-    pass
 
 
 if __name__ == '__main__':

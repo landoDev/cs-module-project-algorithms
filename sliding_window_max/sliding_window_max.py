@@ -4,7 +4,7 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
-
+    # this doesn't make sense, looking at the test. I do not understand this problem and what it is asking
     pass
 
 
