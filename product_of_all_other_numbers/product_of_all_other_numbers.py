@@ -12,15 +12,20 @@ def product_of_all_other_numbers(arr):
     # multiplied_arr = [0] * len(arr)
     # resorted to walking through it on leet code, original code is in slack
     length = len(arr)
+    # track elements to left and right of the given element
     left, right, multiplied_arr = [0] * len(arr), [0] * len(arr), [0] * len(arr)
+    # if there are no elements to the left set index start to 1
     left[0] = 1
     for i in range(1, length):
         # root = arr[i]
         # new_num = 1
+        # get the products from the left side of the number
         left[i] = arr[i - 1] * left[i - 1]
     right[length - 1] = 1
     for i in reversed(range(length - 1)):
+        # flip it and multiply i by all the elements to it's right
         right[i] = arr[i + 1] * right[i + 1]
+    # build the answer array with the multiplied values
     for i in range(length):
         multiplied_arr[i] = left[i] * right[i]
         # filtered_arr = [num for num in arr if num != root]
