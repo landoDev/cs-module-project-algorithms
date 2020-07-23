@@ -9,15 +9,24 @@ def product_of_all_other_numbers(arr):
     # need to track where the root number is and ignore it while iterating through and multiplying it by all other numbers
     # return the multiplied numbers
     # this has to be close
-    multiplied_arr = [0] * len(arr)
-    for i in range(len(arr)- 1):
-        for i in range(len(arr)- 1):
-            root = arr[i]
-            new_num = root
-            filtered_arr = [num for num in arr if num != root]
-            for num in filtered_arr:
-                new_num = num * new_num
-            multiplied_arr[i] = new_num
+    # multiplied_arr = [0] * len(arr)
+    # resorted to walking through it on leet code, original code is in slack
+    length = len(arr)
+    left, right, multiplied_arr = [0] * len(arr), [0] * len(arr), [0] * len(arr)
+    left[0] = 1
+    for i in range(1, length):
+        # root = arr[i]
+        # new_num = 1
+        left[i] = arr[i - 1] * left[i - 1]
+    right[length - 1] = 1
+    for i in reversed(range(length - 1)):
+        right[i] = arr[i + 1] * right[i + 1]
+    for i in range(length):
+        multiplied_arr[i] = left[i] * right[i]
+        # filtered_arr = [num for num in arr if num != root]
+        # for num in filtered_arr:
+        #     new_num = num * new_num
+        # multiplied_arr[i] = new_num
     return multiplied_arr
 
 
