@@ -7,6 +7,11 @@ Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
     # Your code here
+    # use ratio of value / weight to choose the items
+
+    # naive 
+    # sort items by value
+    # if knapsack is not full add that item
 
     pass
 
